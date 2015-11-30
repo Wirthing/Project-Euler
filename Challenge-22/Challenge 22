@@ -1,0 +1,31 @@
+
+
+def lettertonumber(letter):
+    if letter <= "Z" and letter >= "A":
+        value = ord(letter)-64
+    else:
+        value = 0
+##    print(value)
+    return value
+
+text_file = open("challenge22txt.txt", "r")
+whole_thing = text_file.read()
+
+list1 = whole_thing.split(",")
+list1.sort()
+
+
+total = 0
+
+
+#Loop through each word
+for wordpos in range(len(list1)):
+    wordadd = 0
+    #Loop through each letter
+    for charpos in range(len(list1[wordpos])):
+        wordadd += lettertonumber(list1[wordpos][charpos])
+        #print(wordadd)
+    total += ((wordpos + 1) * wordadd)
+print(total)
+    
+    
