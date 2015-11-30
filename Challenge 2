@@ -1,0 +1,21 @@
+#Even fibonacci sequnce numbers
+
+
+#Variables for two numbers and a temporary number.
+number1 = 1
+number2 = 2
+temp = 0
+total = 0
+
+#for loop 1 in 4000000 to add them all up
+while temp <=4000000:
+    temp = number1 + number2
+    number1 = number2 + temp
+    number2 = number1 + temp
+    total += temp
+    
+#print each number, the highest one is the answer.
+print(number1)
+print(number2)
+print(temp)
+print(total)
