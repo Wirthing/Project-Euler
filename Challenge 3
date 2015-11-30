@@ -1,0 +1,12 @@
+
+maxnumber = 600851475143
+
+i = 2
+
+
+while i * i <= maxnumber:
+        while maxnumber % i == 0:
+            maxnumber = maxnumber / i
+        i = i + 1
+
+print(maxnumber)
